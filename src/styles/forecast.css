@@ -1,0 +1,143 @@
+/* Forecast Styles */
+.forecast-container {
+    padding: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* Layout handles header/top offset */
+    padding-top: 24px;
+}
+
+.forecast-header h2 {
+    font-size: 1.5rem;
+    margin-bottom: 24px;
+    font-weight: 700;
+    color: var(--color-text-dark);
+    /* Fixed visibility */
+    /* text-shadow: removed; */
+}
+
+.toggle-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 32px;
+}
+
+.forecast-toggle {
+    background: var(--color-surface-translucent);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 4px;
+    display: flex;
+    width: 320px;
+    box-shadow: var(--shadow-md);
+}
+
+.f-btn {
+    flex: 1;
+    padding: 12px;
+    border-radius: 16px;
+    background: transparent;
+    font-weight: 500;
+    color: var(--color-text-medium);
+    transition: all 0.2s;
+}
+
+.f-btn.active {
+    background: var(--color-primary);
+    box-shadow: var(--shadow-sm);
+    color: var(--color-white);
+}
+
+/* Cards Row */
+.forecast-cards-row {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.forecast-card {
+    min-width: 120px;
+    background: var(--color-surface-translucent);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 16px;
+    padding: 20px 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+    transition: transform 0.2s;
+}
+
+.forecast-card:hover {
+    transform: translateY(-4px);
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.f-day {
+    font-size: 0.9rem;
+    color: var(--color-text-medium);
+    font-weight: 500;
+}
+
+.f-level {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-text-dark);
+}
+
+.f-risk {
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.f-risk.high {
+    background-color: var(--color-alert-red);
+    box-shadow: 0 2px 4px rgba(239, 68, 68, 0.3);
+}
+
+.f-risk.moderate {
+    background-color: var(--color-alert-orange);
+    box-shadow: 0 2px 4px rgba(245, 158, 11, 0.3);
+}
+
+.f-risk.low {
+    background-color: var(--color-success);
+    box-shadow: 0 2px 4px rgba(16, 185, 129, 0.3);
+}
+
+/* Summary Section */
+.summary-section {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    background: #FAFAFA;
+    /* Very light grey */
+    padding: 16px 20px;
+    border-radius: 8px;
+    align-items: center;
+}
+
+.sum-label {
+    font-size: 1rem;
+    color: #333;
+}
+
+.sum-value {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+}
